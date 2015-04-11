@@ -1,0 +1,334 @@
+access : toegang
+access control : toegangscontrole
+access denied : geen toegang
+account : account (m)
+action : actie
+active : actief
+administer : beheren
+administrative interface : beheerinterface
+administrator : beheerder
+aggregator : aggregator
+alias : alias
+allow : toelaten
+anonymous poster : anonieme inzender
+approval queue : goedkeuringsrij
+approved : goedgekeurd
+archive : archief
+ascending : oplopend
+authenticated : geverifieerd (geautoriseerd, geregistreerd)
+attachment : bijlage
+author : auteur
+authorized : geautoriseerd, gemachtigd
+block : blok
+blocked : geblokkeerd
+blog : blog
+blog entry : blog-item
+body : berichttekst
+book : boek
+book navigation : boeknavigatie
+book outline : boekstructuur
+book page : boekpagina
+bookmark : bladwijzer
+breadcrumb: kruimelpad
+break : afbreken, opsplitsen
+browse : bladeren
+browser : browser
+cache : cache
+calendar : kalender
+cancel : annuleren
+cart : winkelwagen
+case sensitive : hoofdlettergevoelig
+categories : categorieën
+characters : tekens
+character encoding : tekenset
+checkbox : keuzevakje
+checked : aangevinkt
+collaborative : gezamenlijk
+collapsed : ingeklapt
+comment : reageren (ww), reactie (zn)
+comment board : reactieforum
+community : gebruikersgroep
+connection : verbinding
+configuration : instelling
+configure : instellen
+confirm : bevestigen
+contact : contact
+contact form : contactformulier
+content : inhoud
+content types : inhoudstypen
+continue : doorgaan
+contributed module : uitbreidingsmodule
+core : core
+create : aanmaken
+credit card : Creditcard
+cron : cron
+crontab : crontab
+custom : aangepast
+customize (ww) : aanpassen
+dash : koppelteken
+dashboard: dashboard
+database : database
+date format : datumnotatie
+default : standaard
+default values : beginwaarden
+defined : definiëren
+delete : verwijderen
+delivery : levering
+deploy : toepassen
+descending : aflopend
+description : beschrijving
+directory : map
+disabled : uitgeschakeld
+discard : verwerpen
+display : weergeven
+display mode : weergavemodus
+display order : weergave-volgorde
+drag and drop : klik-en-sleep
+dropdown : keuzelijst
+download : download
+email : e-mail
+e-mail : e-mail
+edit : bewerken
+effect (core image module) : bewerking
+emphasize : benadrukken
+enabled : ingeschakeld
+encoding : codering
+enter : invoeren
+event : gebeurtenis
+expanded : uitgeklapt
+explanation : uitleg
+export : exporteren
+feature : functie
+feed : feed
+field : veld
+file system : bestandssysteem
+filter : filter
+flag : markering, optie
+flat list : platte lijst
+format : formaat
+formatted : opgemaakt
+forum : forum
+freeform list : vrijevormlijst
+front page : voorpagina
+gallery : album
+global : algemeen
+granularity : nauwkeurigheid
+guest : gast
+help : hulp
+hierarchy : hiërarchie
+history : geschiedenis
+home : home
+homepage : voorpagina
+hostname : hostnaam
+icon : pictogram
+icon set: pictogrammenset
+identifier : identifier
+image : afbeelding
+import : importeren
+input : invoer
+input format : invoerformaat
+interface language : interfacetaal
+keyword : trefwoord, zoekwoord, sleutelwoord
+label : label
+left : resterend
+legacy : erfenis
+library : bibliotheek
+line break : regeleinde
+link : link
+list : lijst (zn), weergeven (ww)
+list selection : meervoudige selectie
+load : belasting
+locale : lokalisatie
+lock : vergrendelen (ww)
+log : log
+log in : Inloggen
+log message : logbericht
+log out : uitloggen
+lookup : opzoeken, raadplegen
+machine name : systeemnaam
+mail : e-mail
+maintain : onderhouden
+main page : voorpagina
+manual : handmatig (ww)
+map : toewijzen (ww), indelen (ww)
+mask : masker
+member : lid
+menu item : menu-item
+message : bericht
+mission : missie
+mode : modus
+moderate : modereren
+moderation queue : moderatiewachtrij
+module : module
+multi-line : meerregelig
+multilingual support : Ondersteuning voor meertaligheid (en geen' meertalige ondersteuning'!)
+multiple : meerdere
+multiple choice questions : meerkeuzevragen
+multiple selector : meervoudige selectie
+navigation : navigatie
+next : volgende
+node : node
+node id : node-ID (m; de ID)
+none : geen
+notification : melding
+offline : offline
+off-line : offline
+online : online
+online : online
+operating system : besturingssysteem
+operations : handelingen
+optional : optioneel
+orphan page : weespagina
+overlay: overlay
+override (ww): overschrijven
+overview : overzicht
+page : pagina
+pane : venster
+panel : panel
+parent : bovenliggend, ouder
+password : wachtwoord
+path : pad
+performance : prestatie
+permissions : toegangsrechten
+picture : afbeelding
+ping : ping
+poll : peiling (gewijzigd)
+post : plaatsen, inzenden (ww), inzending, bericht (zn)
+preview : voorbeeldweergave
+previous : vorige
+primary key : primaire sleutel
+printer-friendly : printvriendelijk
+private : privé, privaat
+profile : profiel
+Promoted to the front page : Aangeraden op de voorpagina
+Property : eigenschap
+provider : provider
+public : openbaar
+public field : publiek veld
+published : gepubliceerd
+raw : onbewerkt
+read only : alleen lezen
+read/write : lezen/schrijven
+recorded : geregistreerd
+referrer : verwijzer
+region : gebied
+registration : registratie
+related terms : gerelateerde termen
+release : uitgave
+reload : vernieuwen
+reply : beantwoorden (ww), antwoord (zn)
+required : verplicht
+reset : reset, opnieuw instellen
+results : resultaten
+revert : terugzetten
+revision : revisies
+rich text : opgemaakte tekst
+root : root, top
+rule : regel
+save : opslaan
+schema : database-structuur
+screenshot : schermafdruk
+scroll box : schuifblok
+search : zoeken
+security : beveiliging
+select : selecteren
+send : versturen
+session : sessie
+settings : instellingen, soms 'optie'
+shipping : verzenden
+shortcut : snelkoppeling
+show : weergeven
+sidebar : zijbalk
+signature : ondertekening, signatuur
+single : enkel
+site-wide : globaal
+size : grootte
+slot : slot
+smiley : emoticon
+source : bron
+space : spatie
+spam : spam
+specify : aangeven/opgeven/kiezen/specificeren
+static page : statische pagina
+status : status, toestand
+state : status
+sticky : vastgeplakt (sticky)
+story : verhaal
+stream wrapper : stream wrapper
+strings : tekenreeksen
+style (core image module) : stijl
+subject : onderwerp
+submission : inzending
+submission guidelines : indienrichtlijnen
+submit : indienen
+subscribe : inschrijven
+subscriber : abonnee
+suffix : suffix
+summary page : overzichtspagina
+suspicious : verdachte
+syndicated content : gesyndiceerde inhoud
+synonyms : synoniemen
+syslog : syslog
+syntax highlighting : syntax markering
+tab : tabblad
+tag : label (HTML tag: HTML-tag)
+target directory : doelmap
+taxonomy : taxonomie
+teaser : teaser
+template : template
+template engine : template-machine
+term : term
+text area : tekstveld
+text format : Tekstopmaak
+theme : thema
+theme engine : template-machine
+threaded list: vertakte lijst
+threshold : drempelwaarde
+throttle : afknijpen (throttle)
+thumbnail : miniatuur
+time : tijd
+time zone : tijdzone
+toggle : wisselen, schakelen
+toolkit : toolkit
+tools : hulpmiddelen
+top-level : topniveau
+topic : topic
+track : volgen (ww)
+trackback : trackback
+tracker : Tracker (modulenaam)
+traffic : dataverkeer
+translation package : vertaalpakket
+trimmed version : ingekorte versie
+trigger : trigger
+type : type
+types : types
+underscore : onderstrepingsteken
+undo : ongedaan maken
+uninstall : deïnstalleren
+Unix timestamp : Unix-tijdstip
+unlimited : onbeperkt
+up : omhoog
+update : bijwerken (ww), update (zn)
+upload : uploaden
+url : URL
+user : gebruiker
+user comments : gebruikersreacties
+user profile : gebruikersprofiel
+user role : gebruikersrol
+verified : gecontroleerd
+view : weergeven (ww)
+visibility : zichtbaarheid
+visit : bezoeken
+visitor : bezoeker
+vocabulary : woordenlijst
+vote : stem
+vote : stemmen
+watchdog : waakhond
+webform : webformulier (zn, niet de modulenaam)
+webpage : webpagina
+website : website
+white space : witruimte
+widget : widget
+window : venster
+workflow : workflow
+

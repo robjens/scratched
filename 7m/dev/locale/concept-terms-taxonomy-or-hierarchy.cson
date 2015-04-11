@@ -1,0 +1,328 @@
+###
+(Q1) Why CSON?
+(A1) Because it is far superior to JSON, if only because of the allowed comments - also hurts the eyes less
+(Q2) But then... how?
+(A2) Simply by means of conversion. This does *not* need to be fully automated yet, as we're not doing
+     any 'hot' translating anyway (yet).
+(Q3) To whom then?
+(A3) That's where the comments come in: it allows for better annotation geared towards fellow developers
+     and project stakeholders. Once done, we can publish JSON like expected.
+(Q4) How did this happen?
+(A4) Because I was trying to force in inflictions (plurals etc) of common nouns and verbs and it was way
+     too much work and DRY violations (for each role e.g. player, also player_plural, player_ etc...)
+     This is 2015: we can use the knowledge and data of the world (Globalize)
+
+     i18n is nice, globalize probably supplements it enough so we have e.g.
+     - GLOBAL languages plural without hiring 200-odd translators for FREE ^^
+
+Tools:
+- cldr-data node.js library for extracting data from CLDR (the Unicode Common Locale Data Repository)
+https://github.com/papandreou/node-cldr
+- natural (inflictions and verb tenses)
+- i18next (combinations and, well, i18n)
+- globalize (it deals with GLOBAL plural, notations and so forth)
+
+EXAMPLE:
+
+
+$ nesh -c
+> cldr = require 'cldr'
+> cldr.extractTerritoryDisplayNames 'nl'
+
+{ '142': 'Azië',
+  '143': 'Centraal-Azië',
+  '145': 'West-Azië',
+  '150': 'Europa',
+  '151': 'Oost-Europa',
+  '154': 'Noord-Europa',
+   ....
+> cldr.extractMeasurementSystemNames('en');
+{ metric: 'Metric', UK: 'UK', US: 'US' }
+
+> cldr.extractCodePatterns('en');
+{ language: 'Language: {0}',
+  script: 'Script: {0}',
+    territory: 'Region: {0}' }
+
+> cldr.extractLanguageDisplayNames('it').en
+'inglese'
+
+> cldr.extractMonthNames('nl', 'gregorian').format.wide
+{ '0': 'januari', '1': 'februari', '2': 'maart', '3': 'april', '4': 'mei', '5': 'juni', '6': 'juli',
+  '7': 'augustus', '8': 'september', '9': 'oktober', '10': 'november', '11': 'december' }
+
+> cldr.extractUnitPatterns('en_GB').long.unit.massKilogram
+{ one: '{0} kilogram',
+  other: '{0} kilograms' }
+
+coffee> cldr.extractUnitPatterns('nl_NL').long.unit
+{ accelerationGForce: { one: '{0} G-kracht', other: '{0} G-krachten' },
+  accelerationMeterPerSecondSquared: { one: '{0} m/s²', other: '{0} m/s²' },
+  angleArcMinute: { one: '{0} boogminuut', other: '{0} boogminuten' },
+  angleArcSecond: { one: '{0} boogseconde', other: '{0} boogseconden' },
+  angleDegree: { one: '{0} booggraad', other: '{0} booggraden' },
+  angleRadian: { one: '{0} radiaal', other: '{0} radialen' },
+  areaAcre: { one: '{0} acre', other: '{0} acres' },
+  areaHectare: { one: '{0} hectare', other: '{0} hectare' },
+  areaSquareCentimeter: 
+
+
+###
+
+# candidate for extraction once it grows large enough
+common:
+    type: "type"
+
+# any more?
+sports:
+    football: "football"
+    hockey: "hockey"
+
+# how does this work? (partial fun/try group not implemented)
+group:
+    base:
+        pair: "buddy pair"
+        triple: "truddy"
+        squad: "squad"
+        team: "team"
+        group: "group"
+        club: "club"
+        league: "league"
+
+
+# some additional roles that seem to make a bit more sense having
+# them ordered
+role:
+
+    # specialized, system users
+    admin:
+        user: "user"
+        admin: "admin"
+        mod: "moderator"
+
+    # specialized, low access/mod rights
+    guest:
+        supporter: "supporter"
+        sponsor: "sponsor"
+
+    # core player and staffing entities
+    base:
+        player:
+            player: "player"
+            player_plural: "players"
+            keeper: "goalkeeper"
+        
+        staff:
+            trainer: "trainer"
+            coach: "coach"
+            owner: "owner"
+            counselor: "counselor"
+
+    # relationships between entities? (ERM)
+    rel:
+        teammate: "teammate"
+        friend: "friend"
+        captain: "captain"
+        acquaintance: "friend of a friend"
+
+    # NOTE: so all these can be automatically inflicted. Why would I do?
+    inflict:
+        player: '__count__  player',
+        player_plural: '__count__  players',
+        player_indefinite: 'a player',
+        player_plural_indefinite: 'some players' 
+
+    # times 10, 20?
+
+# verbs are all about action: doing stuff and making stuff happen
+# the main root of a verb is called the principle (stam vh werkwoord)
+verbs:
+    be:
+        i: "am"
+        he: "is"
+        she: "is"
+
+    # ok.... AUTOMATE
+    create:
+
+
+
+text:
+	measured: "measured"
+	"place-post": "place post"
+	"remove-post": "remove post"
+	"remove-post-description": "are you sure you want to remove this post?"
+	"remove-comment": "remove comment"
+	"remove-comment-description": "are you sure you want to remove this comment?"
+	suggestions: "Suggestions"
+	followers: "Followers"
+	"add-player": "Add player"
+	follows: "I follow"
+	friends: "Friends"
+	"owner-of": "Owner of"
+	"player-at": "Player at"
+	"trainer-at": "Trainer at"
+	left: "Left"
+	right: "Right"
+	both: "Both"
+	"best-leg": "Best leg"
+	weight: "Weight (kg)"
+	length: "Length (cm)"
+	"physical-data": "Physical properties"
+	"sport-society-id": "Sports federation membership ID"
+	phone: "Phone nr."
+	country: "Country"
+	city: "City"
+	"postal-code": "Postal/ZIP code"
+	man: "Man"
+	woman: "Woman"
+	"date-of-birth": "Date of birth"
+	"login-data": "LOGIN DATA"
+	"basic-user-data": "PERSONAL INFO"
+	termsofuse: "Terms & conditions"
+	firstname: "First name"
+	lastname: "Surname"
+	"enter-data-here": "Enter your details here"
+	"make-account-here": "Sign up for a free account now!"
+	"recovery-mail-sent": "The email containing a password recovery link has been sent to the known address"
+	"know-about-sevenmatches": "Want to know more about SevenMatches?"
+	"go-to-the": "Go to the"
+	website: "Website"
+	"password-verification": "Verify password"
+	"forgot-password": "Forgot your password?"
+	password: "password"
+	"email-address": "Email address"
+	login: "Login"
+	"insert-credentials": "Enter your email and password to continue"
+	welcome: "Welcome to the SevenMatches platform"
+	total: "Total"
+	date: "Date"
+	ageclass: "Age class"
+	teamnumber: "Team number"
+	groupnumber: "Groep number"
+	gender: "Gender"
+	players: "Players"
+	keepers: "Keepers"
+	trainers: "Trainers"
+	"remove-team": "Remove team"
+	"remove-review": "Remove review"
+	"remove-player": "Remove player"
+	"review-feedback": "Comments on the last review"
+	address: "address"
+	"found-players": "Players found"
+	"selected-players": "Players selected"
+	"found-keepers": "Keepers found"
+	"selected-keepers": "Keepers selected"
+	"found-trainers": "Trainers found"
+	"selected-trainers": "Trainers selected"
+	founded: "Founded in"
+	stadium: "Stadium"
+	competition: "League"
+	email: "Email"
+	"sign-up": "Sign Up"
+	agree: "I agree"
+	cancel: "Cancel"
+catagories:
+	tactics: "Tactics"
+	personality: "Personality"
+	technique: "Technique"
+	speed: "Speed"
+	physical: "Physical"
+	simple: "Basic"
+	insight: "Insight"
+	"vtt-personality": "Personality"
+	"vtt-footbal": "Technical skills"
+	"vtt-measured": "Measurable skills"
+	"vtt-team": "VTT-Team"
+routes:
+	"my-profile": "My profile"
+	"my-data": "My details"
+	"my-friends": "My friends"
+	"player-data": "Player details"
+	reviews: "Reviews"
+	"player-statistics": "Player statistics"
+	new: "new"
+	teams: "teams"
+	login: "login"
+	"vtt-team": "VTT-Team"
+buttons:
+	"support-btn": "click here for support & feedback"
+	"remove-review": "Remove review"
+	yes: "Yes"
+	no: "No"
+	login: "Login"
+	logout: "Logout"
+	"add-player": "Add player"
+	"add-keeper": "Add keeper"
+	"add-trainer": "Add trainer"
+	"change-password": "Update password"
+	"send-email": "Send email"
+	following: "Following"
+	follow: "Follow"
+	unfollow: "Unfollow"
+	"new-team": "Create new team"
+	save: "Save"
+labels:
+	"extended-review": "Extended review"
+	"simple-review": "Simple review"
+	password: "Password"
+	"old-password": "Current password"
+	"new-password": "New password"
+	"password-repeat": "Repeat password"
+	"new-review": "New review"
+	save: "Save"
+	"to-playerlist": "Open player list"
+	reviews: "Reviews"
+	messages: "Messages"
+	"trainer-data": "Trainer info"
+	"player-data": "Player info"
+	statistics: "Statistics"
+	medical: "Medical record"
+	edit: "Edit"
+	remove: "Delete"
+	transfer: "Transfer"
+	profile: "Profile"
+	vacancies: "Vacancies"
+	club: "Club"
+	teams: "Teams"
+	next: "Next"
+	previous: "Previous"
+	"my-updates": "My updates"
+	"my-data": "My details"
+	"my-trophies": "My trophies"
+	"my-friends": "My friends"
+	"my-fotos": "My pictures"
+	"my-videos": "My videos"
+inputs:
+	select: "select"
+	"search-players": "Search players"
+	boys: "Boys"
+	girls: "Girls"
+	mixed: "Mixed"
+	masters: "Masters"
+	oldtimers: "Old Timers"
+	seniors: "Seniors"
+	"under-4": "U4"
+	"under-6": "U6"
+	"under-8": "U8"
+	"under-10": "U10"
+	"under-12": "U12"
+	"under-14": "U14"
+	"under-16": "U16"
+	"under-18": "U18"
+	"under-19": "U19"
+	"a-team": ""
+	"b-team": ""
+	"c-team": ""
+	"d-team": ""
+	"e-team": ""
+	"f-team": ""
+	gnomes: ""
+	ladies: "Ladies"
+	men: "Men"
+ops:
+	"new-club": "New club"
+	"edit-club": "Edit club"
+	"edit-frontpage": "Edit frontpage"
+club:
+	details: "Club Name and Address Details"

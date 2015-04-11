@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+# prefered method is through package manager:
+# - python2
+# - pip2
+# $ sudo pip2 install mongo-connector
+# $ sudo pacman -S install elastisearch
+#
+
+
+function compile/robomongo()
+{
+    echo https://github.com/paralect/robomongo/wiki/Build-Robomongo
+    git clone https://github.com/paralect/robomongo
+    cd robomongo
+    cmake
+}
+
+
+function compile/mongo-connector()
+{
+    git clone https://github.com/10gen-labs/mongo-connector
+    cd mongo-connector
+    python setup.py install --user
+}
+
+
+
